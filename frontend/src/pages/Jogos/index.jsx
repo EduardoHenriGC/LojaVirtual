@@ -117,18 +117,18 @@ text-transform: uppercase;
 
 
 
-const ListProduto = () => {
+const ListJogos = () => {
 
-  const [produtos, setProdutos] = useState([]);
+  const [jogos, setJogos] = useState([]);
 
 
 
- const getProdutos = async () => {
+ const getJogos = async () => {
 try{
-  const res = await api.get("/produtos")
+  const res = await api.get("/jogos")
 
   const data = res.data
-  setProdutos(data)
+  setJogos(data)
 }
 catch{}
 
@@ -136,7 +136,7 @@ catch{}
  }
 
   useEffect(() => {
-    getProdutos();
+    getJogos();
 
      
       
@@ -146,7 +146,7 @@ catch{}
   return (
     <Content>
    <UL>
-    {produtos.map((item)=>
+    {jogos.map((item)=>
     
     <li className="container-list" key={item.id}>
 
@@ -172,4 +172,4 @@ catch{}
    </UL>
    </Content>
 )}
-export default ListProduto;
+export default ListJogos;
