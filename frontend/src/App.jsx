@@ -5,8 +5,8 @@ import styled from "styled-components"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ListLivros from "./pages/Livros";
 import ListJogos from "./pages/Jogos";
-import SearchItem from "./components/Search/index"
-import SearchPage from "./components/Search/index";
+import ListMangas from "./pages/Mangas";
+import ListColecionaveis from "./pages/Colecionaveis";
 
 
 
@@ -38,6 +38,8 @@ function App() {
           <Route path="/" element={<ListProduto />}></Route>
           <Route path="/livros" element={<ListLivros />}></Route>
           <Route path="/jogos" element={<ListJogos />}></Route>
+          <Route path="/mangas" element={<ListMangas />}></Route>
+          <Route path="/colecionaveis" element={<ListColecionaveis />}></Route>
           
           
          

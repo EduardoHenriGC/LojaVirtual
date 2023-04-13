@@ -7,18 +7,20 @@ import api from "../../Data/api";
 
 
 
-const ListJogos = () => {
-
-  const [jogos, setJogos] = useState([]);
 
 
+const ListMangas = () => {
 
- const getJogos = async () => {
+  const [mangas, setMangas] = useState([]);
+
+
+
+ const getMangas = async () => {
 try{
-  const res = await api.get("/jogos")
+  const res = await api.get("/mangas")
 
   const data = res.data
-  setJogos(data)
+  setMangas(data)
 }
 catch{}
 
@@ -26,7 +28,7 @@ catch{}
  }
 
   useEffect(() => {
-    getJogos();
+    getMangas();
 
      
       
@@ -36,7 +38,7 @@ catch{}
   return (
     <Content>
    <UL>
-    {jogos.map((item)=>
+    {mangas.map((item)=>
     
     <li className="container-list" key={item.id}>
 
@@ -62,4 +64,4 @@ catch{}
    </UL>
    </Content>
 )}
-export default ListJogos;
+export default ListMangas;

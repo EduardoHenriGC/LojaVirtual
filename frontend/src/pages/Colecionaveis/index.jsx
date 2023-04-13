@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from "react";
-import styled from 'styled-components';
+
 import {BsFillCartCheckFill} from "react-icons/bs"
 import {FcLike} from "react-icons/fc"
-import {Content, UL, ImgContainer} from "../ContentStyles.js"
+
 import api from "../../Data/api";
 
 
 
-const ListJogos = () => {
-
-  const [jogos, setJogos] = useState([]);
 
 
 
- const getJogos = async () => {
+const ListColecionaveis = () => {
+
+  const [colecionaveis, setColecionaveis] = useState([]);
+
+
+
+ const getColecionaveis = async () => {
 try{
-  const res = await api.get("/jogos")
+  const res = await api.get("/colecionaveis")
 
   const data = res.data
-  setJogos(data)
+  setColecionaveis(data)
 }
 catch{}
 
@@ -26,7 +29,7 @@ catch{}
  }
 
   useEffect(() => {
-    getJogos();
+    getColecionaveis();
 
      
       
@@ -36,7 +39,7 @@ catch{}
   return (
     <Content>
    <UL>
-    {jogos.map((item)=>
+    {colecionaveis.map((item)=>
     
     <li className="container-list" key={item.id}>
 
@@ -62,4 +65,4 @@ catch{}
    </UL>
    </Content>
 )}
-export default ListJogos;
+export default ListColecionaveis;

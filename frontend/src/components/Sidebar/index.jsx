@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Btn from '../button'
-import SearchPage from '../Search'
 import { Link } from 'react-router-dom';
 
 const Nav = styled.div`
 
 
 background-color: #348e91;
-width: 20vw;
+width: 17vw;
 display: flex;
 flex-direction: column;
 height: 100vh;
@@ -33,12 +32,13 @@ ul{
 const Sidebar = () => {
   return (
     <Nav><ul>
-      <li><SearchPage/></li>
+      
       <li><Link to="/"><Btn nome="home"/></Link></li>
       <li><Link to="/jogos"><Btn nome="jogos"/></Link></li>
     <li><Link to="/livros"><Btn nome="livros"/></Link></li>
-    <li><Btn h nome="mangás"/></li>
-    <li><Btn nome="colecionáveis"/></li></ul></Nav>
+    <li><Link to="/mangas"><Btn nome="mangas"/></Link></li>
+    <li><Link to="/colecionaveis"><Btn nome="colecionáveis"/></Link></li>
+    </ul></Nav>
   )
 }
 
