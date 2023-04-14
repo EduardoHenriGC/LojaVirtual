@@ -11,6 +11,7 @@ width: 17vw;
 display: flex;
 flex-direction: column;
 height: 100vh;
+position: fixed;
 
 
 ul{

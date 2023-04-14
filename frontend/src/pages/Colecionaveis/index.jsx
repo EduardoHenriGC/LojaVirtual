@@ -8,7 +8,7 @@ import api from "../../Data/api";
 
 
 
-
+import {Content, UL, ImgContainer} from "../ContentStyles.js"
 
 const ListColecionaveis = () => {
 
@@ -41,7 +41,7 @@ catch{}
    <UL>
     {colecionaveis.map((item)=>
     
-    <li className="container-list" key={item.id}>
+    <li className="container-list" key={item.nome}>
 
      <h4>{item.nome}</h4>
      <ImgContainer><img src={item.imgurl}/></ImgContainer>

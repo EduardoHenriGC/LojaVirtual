@@ -40,7 +40,7 @@ catch{}
    <UL>
     {livros.map((item)=>
     
-    <li className="container-list" key={item.id}>
+    <li className="container-list" key={item.nome}>
 
      <h4>{item.nome}</h4>
      <ImgContainer><img src={item.imgurl}/></ImgContainer>

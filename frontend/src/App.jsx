@@ -7,6 +7,7 @@ import ListLivros from "./pages/Livros";
 import ListJogos from "./pages/Jogos";
 import ListMangas from "./pages/Mangas";
 import ListColecionaveis from "./pages/Colecionaveis";
+import Modal from "./components/Modal";
 
 
 
@@ -33,7 +34,8 @@ function App() {
     <Container>
        <Router>
        <Sidebar/>
-
+       <Modal/>
+      
         <Routes>
           <Route path="/" element={<ListProduto />}></Route>
           <Route path="/livros" element={<ListLivros />}></Route>

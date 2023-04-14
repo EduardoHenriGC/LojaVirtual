@@ -5,11 +5,13 @@ export const Content = styled.div`
 
 
 width: 83vw;
-height: 100vh;
+margin-left: 17vw;
+height: 100%;
 
 
 
-background-color: #f2f2f2;
+
+
 
 
 
@@ -29,6 +31,7 @@ export const UL = styled.ul`
 
 margin-top: 80px;
 display:flex;
+flex-wrap: wrap;
 justify-content: center;
 align-items:center;
 gap: 40px;
@@ -62,7 +65,7 @@ cursor: pointer;
   justify-content: space-between;
   align-items: center;
   margin-top: 5px;
- 
+ margin-bottom: 30px;
  
 
 
@@ -70,6 +73,7 @@ cursor: pointer;
 .preco{
 
 margin-top: 10px;
+
 font-weight: bold;
 font-size: 1.2rem;
 
